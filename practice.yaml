@@ -1,0 +1,10 @@
+#comment
+# - character represent the list
+
+food:
+  - vegitables: tomatos #this is first list
+  - fruits:   #this is second list
+    citrics: orange
+    tropical: bananas
+    nuts: peanuts
+    sweet: raisins
