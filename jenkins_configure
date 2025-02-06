@@ -1,0 +1,15 @@
+rm -rfv Jenkins-Automation-CI-CD-pipeline
+
+git clone git@github.com:dipakrasal2009/Jenkins-Automation-CI-CD-pipeline.git
+cd Jenkins-Automation-CI-CD-pipeline
+if  docker ps -a | grep myapp12:v2
+then
+	docker stop myapp12
+	docker rmi -f  myapp12:v2
+fi
+docker build -t myapp12:v2 .
+#sudo docker stop myapp12
+#sudo docker rm -f myapp12
+sudo docker run -dit --name myapp myapp12:v2
+#sudo docker push myapp12:v1
+
